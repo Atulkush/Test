@@ -37,7 +37,6 @@ public class Converttiff implements Runnable {
     private Thread t;
     private String SourcePath="";
     private String Destinationpath = "";
-	private static String sUtilityStartTime="";
     private boolean bAPMoveFile=false;
 
     public Converttiff() {
@@ -175,7 +174,6 @@ public class Converttiff implements Runnable {
 			ini.load(new FileInputStream(System.getProperty("user.dir") + System.getProperty("file.separator") + "ConvertPDFtoTIFF.ini"));
 			SourcePath=ini.getProperty("SourceFolder");
 			Destinationpath=ini.getProperty("DestinationFolder");
-			 sUtilityStartTime=ini.getProperty("UtilityStartTime");
            	}catch(Exception e) {
 	            System.out.println("Error in reading ini file..."+e);
 	            e.printStackTrace();
